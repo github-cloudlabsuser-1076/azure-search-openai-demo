@@ -1,3 +1,10 @@
+"""
+This module defines the base class for all approaches used in the application. An approach is a strategy for handling user queries, which may involve multiple steps such as generating a search query, retrieving relevant documents, and generating a response.
+
+Each specific approach, such as `ChatReadRetrieveReadApproach` or `RetrieveThenReadVisionApproach`, extends this base class and implements its own logic for handling queries.
+
+The base `Approach` class provides a common interface for all approaches, ensuring they can be used interchangeably in the application.
+"""
 import os
 from abc import ABC
 from dataclasses import dataclass
